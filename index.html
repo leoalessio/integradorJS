@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartShop</title>
+    <!-- agregar favicon -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/logo.png" alt="logo de SmartShop" class="logo" />
+      <nav class="navbar">
+        <!-- <div class="menu-label">
+          <img src="./assets/menu.png" alt="" class="menu-icon" />
+        </div> -->
+        <ul class="navbar-list">
+          <li><a class="navbar-link" href="#hero">Home</a></li>
+          <!-- <li><a class="navbar-link" href="#discover">Descubre</a></li> -->
+          <li><a class="navbar-link" href="#products">Productos</a></li>
+        </ul>
+
+        <div class="cart-label">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- hero -->
+      <section id="hero">
+        <div class="hero-info">
+          <h1>Bienvenido a nuestra tienda inteligente</h1>
+          <p>
+            Desarrollamos una tienda inteligente para que tu compra sea
+            inteligente.
+          </p>
+        </div>
+        <div class="hero-card">
+          <img src="./assets/img/hero-img.png" alt="" />
+        </div>
+      </section>
+      <section id="products">
+        <h2>Hot NFTs</h2>
+        <!-- categories -->
+        <div class="categories">
+          <button class="category active">Ropa de hombre</button>
+          <button class="category" data-category="">Joyas</button>
+          <button class="category" data-category="">Electrónica</button>
+          <button class="category" data-category="">Ropa de Mujer</button>
+        </div>
+
+        <!-- products -->
+        <div class="products-container"></div>
+        <button class="btn-load">Ver Más</button>
+      </section>
+
+      <footer>
+        <div>
+          <ul class="footer-links">
+            <li><a href="#">Términos de Uso</a></li>
+            <li><a href="#">Trabajá con Nosotros</a></li>
+            <li><a href="#">Soporte</a></li>
+          </ul>
+        </div>
+        <p>Hecho con ❤️ por <span>LEANDRO ALESSIO</span></p>
+      </footer>
+    </main>
+  </body>
+</html>
