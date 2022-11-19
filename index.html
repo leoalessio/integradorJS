@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmartShop</title>
-    <!-- agregar favicon -->
     <link rel="stylesheet" href="./assets/styles.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -16,22 +16,53 @@
     <header>
       <img src="./assets/img/logo.png" alt="logo de SmartShop" class="logo" />
       <nav class="navbar">
-        <!-- <div class="menu-label">
-          <img src="./assets/menu.png" alt="" class="menu-icon" />
-        </div> -->
+        <div class="menu-label">
+          <img src="./assets/img/manuBars.png" alt="" class="menu-icon" />
+        </div>
+
         <ul class="navbar-list">
           <li><a class="navbar-link" href="#hero">Home</a></li>
-          <!-- <li><a class="navbar-link" href="#discover">Descubre</a></li> -->
           <li><a class="navbar-link" href="#products">Productos</a></li>
         </ul>
 
-        <div class="cart-label">
-          <i class="fa-solid fa-basket-shopping"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="login">
+          <button type="button" class="btn-login" data-open="modal">
+            Ingresar 
+          </button>
         </div>
-      </nav>
+        <div class="cart-label">
+          <i class="fa-solid fa-basket-shopping cart-icon"></i>
+        </div>
+      
+      <div class="cart">
+        <h2>Tus productos</h2>
+
+        <div class="cart-container"></div>
+
+        <span class="divider"></span>
+
+        <div class="cart-total">
+          <p>Total:</p>
+          <span class="total">USD 0.00 </span>
+        </div>
+        <button class="btn-buy">Comprar</button>
+        <button class="btn-delete">Vaciar carrito</button>
+      </div>
+
+
+
+    </nav>
     </header>
     <main>
+      <!-- modal loign -->
+      <section class="modal">
+        <div class="modal__container">
+          <img src="./assets/img/avatar.png" class="modal__img" alt="login">
+          <h2 class="modal__title">Que bueno volver a verte!</h2>
+          <p class="modal__p">Por favor ingresá tus datos de acceso</p>
+          <a href="#" class="modal__close">Cerrar</a>
+        </div>
+      </section>
       <!-- hero -->
       <section id="hero">
         <div class="hero-info">
@@ -46,20 +77,23 @@
         </div>
       </section>
       <section id="products">
-        <h2>Hot NFTs</h2>
+        <h2>Productos</h2>
         <!-- categories -->
         <div class="categories">
-          <button class="category active">Ropa de hombre</button>
-          <button class="category" data-category="">Joyas</button>
-          <button class="category" data-category="">Electrónica</button>
-          <button class="category" data-category="">Ropa de Mujer</button>
+          <button class="category active">Todo</button>
+          <button class="category" data-category="menClothing">Ropa de hombre</button>
+          <button class="category" data-category="jewelery">Joyas</button>
+          <button class="category" data-category="electronics">Electrónica</button>
+          <button class="category" data-category="womenClothing">Ropa de Mujer</button>
         </div>
 
         <!-- products -->
-        <div class="products-container"></div>
+        <div class="products-container">
+          
+        </div>
         <button class="btn-load">Ver Más</button>
       </section>
-
+    </main>
       <footer>
         <div>
           <ul class="footer-links">
@@ -68,8 +102,11 @@
             <li><a href="#">Soporte</a></li>
           </ul>
         </div>
-        <p>Hecho con ❤️ por <span>LEANDRO ALESSIO</span></p>
+        <p>Hecho por <span>LEANDRO ALESSIO</span></p>
       </footer>
-    </main>
+      <div class="add-modal"></div>
+
+    <script src="./assets/request.js"></script>
+    <script src="./assets/main.js"></script>
   </body>
 </html>
