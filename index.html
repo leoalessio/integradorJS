@@ -27,41 +27,54 @@
 
         <div class="login">
           <button type="button" class="btn-login" data-open="modal">
-            Ingresar 
+            Ingresar
           </button>
         </div>
         <div class="cart-label">
           <i class="fa-solid fa-basket-shopping cart-icon"></i>
         </div>
-      
-      <div class="cart">
-        <h2>Tus productos</h2>
 
-        <div class="cart-container"></div>
+        <div class="cart">
+          <h2>Tus productos</h2>
 
-        <span class="divider"></span>
+          <div class="cart-container"></div>
 
-        <div class="cart-total">
-          <p>Total:</p>
-          <span class="total">USD 0.00 </span>
+          <span class="divider"></span>
+
+          <div class="cart-total">
+            <p>Total:</p>
+            <span class="total">USD 0.00 </span>
+          </div>
+          <button class="btn-buy">Comprar</button>
+          <button class="btn-delete">Vaciar carrito</button>
         </div>
-        <button class="btn-buy">Comprar</button>
-        <button class="btn-delete">Vaciar carrito</button>
-      </div>
-
-
-
-    </nav>
+      </nav>
     </header>
     <main>
       <!-- modal loign -->
       <section class="modal">
-        <div class="modal__container">
-          <img src="./assets/img/avatar.png" class="modal__img" alt="login">
-          <h2 class="modal__title">Que bueno volver a verte!</h2>
-          <p class="modal__p">Por favor ingresá tus datos de acceso</p>
-          <a href="#" class="modal__close">Cerrar</a>
-        </div>
+        <form action="" method="POST" id="form" class="modal__container">
+          <div class="modal__container">
+            <img src="./assets/img/avatar.png" class="modal__img" alt="login" />
+            <h2 class="modal__title">Que bueno volver a verte!</h2>
+            <p class="modal__p">Por favor ingresá tus datos de acceso</p>
+            <div class="grupo">
+              <input type="email" name="" id="email" /><span
+                class="barra"
+              ></span>
+              <label for="">Email</label>
+            </div>
+            <div class="grupo">
+              <input type="password" name="" id="password" /><span
+                class="barra"
+              ></span>
+              <label for="">Password</label>
+            </div>
+            <div class="modal__btn">
+            <a href="#" class="modal__close">Ingresar</a>
+          </div>
+          </div>
+        </form>
       </section>
       <!-- hero -->
       <section id="hero">
@@ -81,30 +94,34 @@
         <!-- categories -->
         <div class="categories">
           <button class="category active">Todo</button>
-          <button class="category" data-category="menClothing">Ropa de hombre</button>
+          <button class="category" data-category="menClothing">
+            Ropa de hombre
+          </button>
           <button class="category" data-category="jewelery">Joyas</button>
-          <button class="category" data-category="electronics">Electrónica</button>
-          <button class="category" data-category="womenClothing">Ropa de Mujer</button>
+          <button class="category" data-category="electronics">
+            Electrónica
+          </button>
+          <button class="category" data-category="womenClothing">
+            Ropa de Mujer
+          </button>
         </div>
 
         <!-- products -->
-        <div class="products-container">
-          
-        </div>
+        <div class="products-container"></div>
         <button class="btn-load">Ver Más</button>
       </section>
     </main>
-      <footer>
-        <div>
-          <ul class="footer-links">
-            <li><a href="#">Términos de Uso</a></li>
-            <li><a href="#">Trabajá con Nosotros</a></li>
-            <li><a href="#">Soporte</a></li>
-          </ul>
-        </div>
-        <p>Hecho por <span>LEANDRO ALESSIO</span></p>
-      </footer>
-      <div class="add-modal"></div>
+    <footer>
+      <div>
+        <ul class="footer-links">
+          <li><a href="#">Términos de Uso</a></li>
+          <li><a href="#">Trabajá con Nosotros</a></li>
+          <li><a href="#">Soporte</a></li>
+        </ul>
+      </div>
+      <p>Hecho por <span>LEANDRO ALESSIO</span></p>
+    </footer>
+    <div class="add-modal"></div>
 
     <script src="./assets/request.js"></script>
     <script src="./assets/main.js"></script>

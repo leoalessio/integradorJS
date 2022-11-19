@@ -12,16 +12,25 @@ const barsMenu = document.querySelector(".navbar-list");
 const openModal = document.querySelector(".btn-login");
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".modal__close");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const form = document.getElementById("form");
+const parrafo = document.getElementById("warnings");
 
+//abrir y cerrar el botón de login
 const openLogin = (e) => {
-  e.preventDefault();
+  if (modal.classList.contains("modal__show")) {
+    modal.classList.remove("modal__show");
+    return;
+  }
   modal.classList.add("modal__show");
-};  
+};
 
 const closeLogin = (e) => {
   e.preventDefault();
   modal.classList.remove("modal__show");
-}
+};
+
 
 //Botones carrito
 const buyBtn = document.querySelector(".btn-buy");
@@ -31,12 +40,11 @@ const deleteBtn = document.querySelector(".btn-delete");
 const successModal = document.querySelector(".add-modal");
 
 // Setear el array para el carro
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // Funcion para guardar en el localStorage
 const saveLocalStorage = (cartList) => {
-  localStorage.setItem('cart', JSON.stringify(cartList));
+  localStorage.setItem("cart", JSON.stringify(cartList));
 };
 
 // Funcion para retornar el html a renderizar
@@ -208,7 +216,6 @@ const renderCartProduct = (cartProduct) => {
   `;
 };
 
-
 const renderCart = () => {
   if (!cart.length) {
     productsCart.innerHTML = `<p class="empty-msg">No hay productos en el carrito. Apurate y comprá algo.</p>`;
@@ -220,7 +227,7 @@ const renderCart = () => {
 
 const getCartTotal = () => {
   return cart.reduce((acc, cur) => acc + Number(cur.price) * cur.quantity, 0);
-};  
+};
 
 const showTotal = () => {
   total.innerHTML = `${getCartTotal().toFixed(2)} USD`;
@@ -233,7 +240,6 @@ const disableBtn = (btn) => {
     btn.classList.remove("disabled");
   }
 };
-
 
 const createProductData = (id, title, price, image) => {
   return { id, title, price, image };
@@ -278,7 +284,7 @@ const addProduct = (e) => {
   const product = createProductData(id, title, price, image);
 
   if (isExistingCartProduct(product)) {
-    addUnitToProduct( );
+    addUnitToProduct();
     showSuccessModal("Se agregó una unidad del producto al carrito");
   } else {
     createCartProduct(product);
@@ -361,7 +367,6 @@ const init = () => {
   barsBtn.addEventListener("click", toggleMenu);
   window.addEventListener("scroll", closeOnScroll);
   barsMenu.addEventListener("click", closeOnClick);
-  //overlay.addEventListener("click", closeOnOverlayClick);
   document.addEventListener("DOMContentLoaded", renderCart);
   document.addEventListener("DOMContentLoaded", showTotal);
   products.addEventListener("click", addProduct);
